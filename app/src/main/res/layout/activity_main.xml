@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        tools:context="com.example.android.areyouready.MainActivity">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:gravity="center_horizontal"
+            android:text="Welcome to\nAre you ready to study?"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:id="@+id/main_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:adjustViewBounds= "true"
+            android:maxHeight="280dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/welcome"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:gravity="center"
+            android:text="summary"
+            android:textSize="30sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/q4_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+
+            <CheckBox
+                android:id="@+id/box1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:text="apples"
+                android:textSize="30sp"
+                />
+
+            <CheckBox
+                android:id="@+id/box2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:text="donuts"
+                android:textSize="30sp"
+
+                />
+
+            <CheckBox
+                android:id="@+id/box3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:text="cake"
+                android:textSize="30sp"
+
+                />
+
+            <CheckBox
+                android:id="@+id/box4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:text="oranges"
+                android:textSize="30sp"
+
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+        android:id="@+id/toast_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:visibility="gone"
+        >
+            <ImageView
+            android:id="@+id/toast_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds= "true"
+            android:maxHeight="280dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/toast"
+            />
+
+            <TextView
+            android:id="@+id/toast_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="text on toast" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/q5_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:visibility="gone"
+            >
+
+
+            <EditText
+                android:id="@+id/q5_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/q6_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+
+            >
+
+            <RadioButton
+            android:id="@+id/radio_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+                android:text="yes"
+                />
+
+
+            <RadioButton
+            android:id="@+id/radio_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+                android:text="no"
+
+                />
+
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10">
+
+            <Button
+                android:id="@+id/button_ok"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="#607d8b"
+                android:onClick="ok"
+                android:text="Okay"
+                android:textColor="#FFFFFF"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button_y"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="#607d8b"
+                android:onClick="yes"
+                android:text="Yes"
+                android:textColor="#FFFFFF"
+                android:visibility="gone"
+
+                />
+
+            <Button
+                android:id="@+id/button_n"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#607d8b"
+                android:onClick="no"
+                android:text="No"
+                android:textColor="#FFFFFF"
+                android:visibility="gone"
+
+
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
